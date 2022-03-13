@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IconName</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <div></div>
+        <p>Jessica Medeiros Pocarli</p>       
+    </section>
+    <script>
+        const name = document.querySelector('p').textContent;
+        const iconName = document.querySelector('div');
+        let firstLetterName = name.split(' ').map( e => e.charAt(0));
+        firstLetterName = firstLetterName.toString().replaceAll(',', '')
+        iconName.innerHTML = firstLetterName.toUpperCase();
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+            padding: 15px;
+
+            background-color: #121214;           
+            color: #ff0042;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+    </style>
+</body>
+</html>
